@@ -31,6 +31,12 @@
                     <li class="nav-item">
                         <a class="nav-link @if(Route::currentRouteName() == 'create.article') active @endif" href="{{ route('create.article') }}">Link</a>
                     </li>
+                    @auth
+                <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button class="my-btn" type="submit">Logout  <i class="fa-solid fa-arrow-right-from-bracket"></i></i></button>
+                </form>
+                @endauth
                 </ul>
             </div>
         </div>
