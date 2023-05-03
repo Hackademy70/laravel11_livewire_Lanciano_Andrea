@@ -8,6 +8,7 @@ use Livewire\Component;
 class ShowArticle extends Component
 {
 
+
     public function delete(Article $article){
         $article->delete();
     }

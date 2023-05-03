@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Route::get('/Create-article', function () {
     return view('articleCreate');
 })->name('create.article');
+
+Route::get('/article/edit/{article}', function (Article $article) {
+    return view('articleEdit', compact('article'));
+})->name('article.edit');

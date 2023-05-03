@@ -22,6 +22,9 @@
                                     <button class="btn btn-outline-danger" type="submit"><i class="fa-solid fa-trash"></i></button>
                                 </form>
                             </td>
+                            <td>
+                                <a class="btn btn-warning" href="{{ route('article.edit', $article) }}">Modifica</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
