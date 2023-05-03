@@ -35,10 +35,13 @@ class EditArticle extends Component
         $article->update([
             'title'=>$this->title,
             'subtitle'=>$this->subtitle,
-            'body'=>$this->body
+            'abstract'=>$this->abstract,
+            'year' => $this->year,
+            'author' => $this->author,
+            'genre' => $this->genre
         ]);
         
-        return redirect()->route('article.index');
+        return redirect()->route('home');
     }
 
     public function render()

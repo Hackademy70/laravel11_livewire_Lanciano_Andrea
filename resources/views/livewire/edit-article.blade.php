@@ -7,7 +7,7 @@
                 <h1>Modifica il tuo articolo!</h1>
                 <p class="lead">Per un'informazione libera e gratuita.</p>
                 {{-- Qui comincia il form --}}
-                <form wire:submit.prevent="store">
+                <form wire:submit.prevent="update">
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" class="form-control" wire:model="title">
